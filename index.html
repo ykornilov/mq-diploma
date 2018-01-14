@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Surface</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <div class="header-title">
         <p>
           Be recruited
@@ -19,36 +19,39 @@
         </p>
       </div>
       <div class="header-buttons">
-        <a href="#">Download on the <b>App Store</b></a>
-        <a href="#">Get it on <b>Google Play</b></a>
+        <a class="button apple-button" href="#">Download on the <b>App Store</b></a>
+        <a class="button google-button" href="#">Get it on <b>Google Play</b></a>
       </div>
     </header>
 
     <main>
       <section class="athlets">
-        <h2>Athlets</h2>
-        <picture>
-          <img src="" alt="">
+        <h2 class="athlets-title">Athlets</h2>
+        <picture class="athlets-img">
+          <source srcset="./images/footballer_320.png" media="(max-width: 640px)">
+          <source srcset="./images/footballer_768.png" media="(min-width: 641px) and (max-width: 960px)">
+          <source srcset="./images/footballer_desktop.png" media="(min-width: 961px)">
+          <img src="./images/footballer_320.png" alt="footballer">
         </picture>
-        <ol>
-          <li>
-            <h3>Connection</h3>
+        <ol class="athlets-features list-style-custom">
+          <li class="athlets-feature">
+            <h3 class="athlets-feature-title li-style-custom li-lightbg">Connection</h3>
             <p>
               Connect with coaches directly,
               you can ping coaches to view profile.
             </p>
           </li>
-          <li>
-            <h3>Collaboration</h3>
+          <li class="athlets-feature">
+            <h3 class="athlets-feature-title li-style-custom li-lightbg">Collaboration</h3>
             <p>
-              Work with other student athletes to  increase visability.
+              Work with other student athletes to increase visability.
               When you share and like other players videos
               it will increase your visability as a player.
               This is the team work aspect to Surface 1.
             </p>
           </li>
-          <li>
-            <h3>Growth</h3>
+          <li class="athlets-feature">
+            <h3 class="athlets-feature-title li-style-custom li-bluebg">Growth</h3>
             <p>
               Resources and tools for you to get better
               as a student Athelte. Access to training classes,
@@ -59,27 +62,30 @@
       </section>
 
       <section class="players">
-        <h2>Players</h2>
-        <picture>
-          <img src="" alt="">
+        <h2 class="players-title">Players</h2>
+        <picture class="players-img">
+          <source srcset="./images/player_320.png" media="(max-width: 640px)">
+          <source srcset="./images/player_768.png" media="(min-width: 641px) and (max-width: 960px)">
+          <source srcset="./images/player_desktop.png" media="(min-width: 961px)">
+          <img src="./images/player_320.png" alt="player">
         </picture>
-        <ol>
-          <li>
-            <h3>Connection</h3>
+        <ol class="players-features list-style-custom">
+          <li class="players-feature">
+            <h3 class="players-feature-title li-style-custom li-lightbg">Connection</h3>
             <p>
               Connect with talented athlete directly,
               you can watch their skills.
             </p>
           </li>
-          <li>
-            <h3>Collaboration</h3>
+          <li class="players-feature">
+            <h3 class="players-feature-title li-style-custom li-lightbg">Collaboration</h3>
             <p>
               Work with recruiter to increase your chances
               of findingtalented athlete.
             </p>
           </li>
-          <li>
-            <h3>Growth</h3>
+          <li class="players-feature">
+            <h3 class="players-feature-title li-style-custom li-darkbg">Growth</h3>
             <p>
               Save your time, recruit proper athlets for your team. 
             </p>
@@ -88,44 +94,53 @@
       </section>
 
       <section class="actions">
-        <ol>
-          <li>
-            <figure>
-              <picture>
-                <img src="" alt="">
+        <ol class="actions-list list-style-custom">
+          <li class="action-item">
+            <figure class="action">
+              <picture class="action-picture">
+                <source srcset="./images/be_active_320.jpg" media="(max-width: 320px)">
+                <source srcset="./images/be_active_768.jpg" media="(min-width: 321px) and (max-width: 768px)">
+                <source srcset="./images/be_active_desktop.jpg" media="(min-width: 769px)">
+                <img class="action-img" src="./images/be_active_320.jpg" alt="be active">
               </picture>
-              <figcaption>
-                <h2>Be active</h2>
-                <p>
+              <figcaption class="action-label">
+                <h2 class="action-title li-style-custom li-square">Be active</h2>
+                <p class="action-description">
                   Post videos with your skills,
-                  Like and follow others to be
-                  more popular.
+                  Like&nbsp;and follow others to be
+                  more&nbsp;popular.
                 </p>
               </figcaption>
             </figure>
           </li>
-          <li>
-            <figure>
-              <picture>
-                <img src="" alt="">
+          <li class="action-item">
+            <figure class="action">
+              <picture class="action-picture">
+                <source srcset="./images/find_contact_320.jpg" media="(max-width: 320px)">
+                <source srcset="./images/find_contact_768.jpg" media="(min-width: 321px) and (max-width: 768px)">
+                <source srcset="./images/find_contact_desktop.jpg" media="(min-width: 769px)">
+                <img class="action-img" src="./images/find_contact_320.jpg" alt="find contact">
               </picture>
-              <figcaption>
-                <h2>Find contact</h2>
-                <p>
+              <figcaption class="action-label">
+                <h2 class="action-title li-style-custom li-square">Find contact</h2>
+                <p class="action-description">
                   Contact others to find right coach
                   or athlete you are looking for.
                 </p>
               </figcaption>
             </figure>
           </li>
-          <li>
-            <figure>
-              <picture>
-                <img src="" alt="">
+          <li class="action-item">
+            <figure class="action">
+              <picture class="action-picture">
+                <source srcset="./images/work_it_320.jpg" media="(max-width: 320px)">
+                <source srcset="./images/work_it_768.jpg" media="(min-width: 321px) and (max-width: 768px)">
+                <source srcset="./images/work_it_desktop.jpg" media="(min-width: 769px)">
+                <img class="action-img" src="./images/work_it_320.jpg" alt="work it">
               </picture>
-              <figcaption>
-                <h2>Work it</h2>
-                <p>
+              <figcaption class="action-label">
+                <h2 class="action-title li-style-custom li-square">Work it</h2>
+                <p class="action-description">
                   Enjoy being a student athlete,
                   the recruiting process can be overwhelming,
                   we want to make this a enjoyable experience. 
@@ -137,7 +152,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="main-footer">
       <div class="footer-title">
         <h2>Download App</h2>
         <p>
@@ -145,8 +160,8 @@
         </p>
       </div>
       <div class="footer-buttons">
-        <a href="#">Download on the <b>App Store</b></a>
-        <a href="#">Get it on <b>Google Play</b></a>
+        <a class="button apple-button" href="#">Download on the <b>App Store</b></a>
+        <a class="button google-button" href="#">Get it on <b>Google Play</b></a>
       </div>
     </footer>
   </body>

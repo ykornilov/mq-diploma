@@ -1,4 +1,4 @@
-* {
+*,figure {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,4 +8,339 @@ html {
   font-style: normal;
   font-weight: normal;
   font-family: "OpenSans", sans-serif;
+}
+
+h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.list-style-custom {
+  list-style-type: none;
+  counter-reset: list;
+}
+
+.li-style-custom {
+  position: relative;
+  counter-increment: list;
+}
+
+.li-style-custom::before {
+  content: "0" counter(list);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.li-lightbg::before {
+  color: black;
+  background: url("../images/border_blue.png") bottom center/contain no-repeat;
+}
+
+.li-bluebg::before {
+  color: black;
+  background: url("../images/border_white.png") bottom center/contain no-repeat;
+}
+
+.li-darkbg::before {
+  color: #8765dd;
+  background: url("../images/border_white.png") bottom center/contain no-repeat;
+}
+
+.li-square::before {
+  color: white;
+  background: url("../images/border_transparency.png") bottom center/contain no-repeat #5e42b0;
+  border-style: solid;
+  border-left-width: 25px;
+  border-right-width: 25px;
+  border-top-width: 19px;
+  border-bottom-width: 24px;
+  border-color:  #5e42b0;
+}
+
+.main-header,
+.main-footer {
+  position: relative;
+}
+
+.main-header::before,
+.main-footer::before {
+  content: url("../images/svg/surface_logo_text.svg");
+  position: absolute;
+}
+
+.main-header,
+.main-footer,
+.button {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header-title {
+  font-weight: bold;
+}
+
+.header-title p:nth-child(even) {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.action-img {
+  max-width: 100%;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #5e42b0;
+  box-shadow: 8px 14px 24px 0 #0a0e34;
+}
+
+.apple-button::before {
+  content: url("../images/svg/apple_logo_black.svg");
+}
+
+.google-button::before {
+  content: url("../images/svg/google-play.svg");
+}
+
+@media (max-width: 640px) {
+  .main-header,
+  .main-footer {
+    min-height: 568px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-header {
+    padding-top: 200px;
+    padding-bottom: 85px;
+    background: url("../images/header_bg_320.jpg") center top/cover no-repeat #0a0e34;
+  }
+
+  .main-header::before {
+    top: 33px;
+    left: calc(50% - 71px);
+    width: 134px;
+  }
+
+  .header-title p {
+    max-width: 235px;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 1.1px;
+  }
+
+  .header-title p:nth-child(even) {
+    margin-top: 18px;
+  }
+
+  .header-buttons,
+  .footer-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-buttons {
+    margin-top: 68px;
+  }
+
+  .button {
+    margin-top: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: calc(50% - 30px);
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    border-radius: 17px;
+  }
+
+  .button::before,
+  .button::before {
+    position: absolute;
+    top: calc(50% - 26px/2);
+    left: calc(50% - 60px);
+    width: 24px;
+  }
+
+  .athlets,
+  .players {
+    position: relative;
+    padding-top: 12px;
+  }
+
+  .athlets-title,
+  .players-title {
+    margin: 0 20px;
+    font-size: 50px;
+    line-height: 60px;
+    color: #e7e7e7;
+  }
+
+  .athlets-img,
+  .players-img {
+    position: absolute;
+  }
+
+  .athlets-img {
+    top: 80px;
+    left: calc(50% - 90px);
+  }
+
+  .players-img {
+    top: 83px;
+    left: calc(50% - 158px);
+  }
+
+  .athlets-features,
+  .players-features {
+    margin-top: 233px;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.7px;
+  }
+
+  .athlets-feature,
+  .players-feature {
+    padding: 51px 20px;
+  }
+
+  .athlets-feature:first-child,
+  .players-feature:first-child {
+    padding-top: 73px;
+    background-color: #fafafa;
+  }
+
+  .athlets-feature:nth-child(2),
+  .players-feature:nth-child(2) {
+    background-color: #f5f4f9;
+  }
+
+  .athlets-feature:last-child {
+    padding-bottom: 35px;
+    color: white;
+    background-color: #5e42b0;
+  }
+
+  .players-feature:last-child {
+    padding-top: 46px;
+    padding-bottom: 53px;
+    color: white;
+    background-color: #090c35;
+  }
+
+  .athlets-feature-title,
+  .players-feature-title {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    color: #c1c1c1;
+  }
+
+  .li-square::before {
+    top: -90px;
+  }
+
+  .action-label {
+    padding: 25px 20px 75px 20px;
+  }
+
+  .action-title {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    color: #e7e7e7;
+  }
+
+  .action-description {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+  }
+
+  .main-footer {
+    margin-top: -7px;
+    padding-top: 220px;
+    padding-bottom: 130px;
+    background: url("../images/footer_bg_320.jpg") center top/cover no-repeat #0a0e34;
+  }
+
+  .main-footer::before {
+    bottom: 2px;
+    left: calc(50% - 71px);
+    width: 134px;
+  }
+
+  .footer-title {
+    position: relative;
+    text-align: center;
+  }
+
+  .footer-title::before {
+    content: url("../images/svg/surface_logo.svg");
+    position: absolute;
+    bottom: calc(100% + 48px);
+    left: calc(50% - 38px);
+    box-sizing: border-box;
+    width: 72px;
+    padding: 10px 7px 4px;
+    background: linear-gradient(to top, #50329c, #7751db);
+    border-radius: 15px;
+  }
+
+  .footer-title h2 {
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 1.1px;
+  }
+
+  .footer-title p {
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    color: #a496ca;
+  }
+
+  .footer-buttons {
+    margin-top: 60px;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .main-header,
+  .main-footer {
+    min-height: 959px;
+  }
+
+  .main-header {
+    background: url("../images/header_bg_768.jpg") center top/cover no-repeat #0a0e34;
+  }
+
+  .main-footer {
+    background: url("../images/footer_bg_768.jpg") center top/cover no-repeat #0a0e34;
+  }
+}
+
+@media (min-width: 961px) {
+  .main-header,
+  .main-footer {
+    min-height: 960px;
+  }
+
+  .main-header {
+    background: url("../images/header_bg_desktop.jpg") center top/cover no-repeat #0a0e34;
+  }
+
+  .main-footer {
+    background: url("../images/footer_bg_desktop.jpg") center top/cover no-repeat #0a0e34;
+  }
 }
