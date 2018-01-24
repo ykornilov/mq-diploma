@@ -58,6 +58,7 @@ h2, h3 {
 .main-footer,
 .header-title {
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,13 +80,10 @@ h2, h3 {
 
 .header-title {
   font-weight: bold;
+  align-items: flex-start;
 }
 
-.header-title .slogan:nth-child(odd) {
-  align-self: flex-start;
-}
-
-.header-title .slogan:nth-child(even) {
+.header-title span {
   align-self: flex-end;
 }
 
@@ -215,11 +213,8 @@ h2, h3 {
     letter-spacing: 1.1px;
   }
 
-  .header-title .slogan {
+  .header-title span {
     max-width: 235px;
-  }
-
-  .header-title .slogan:nth-child(even) {
     margin-top: 15px;
   }
 
@@ -413,11 +408,8 @@ h2, h3 {
     letter-spacing: 3.1px;
   }
 
-  .header-title .slogan {
+  .header-title span {
     max-width: 500px;
-  }
-
-  .header-title .slogan:nth-child(even) {
     margin-top: 1px;
   }
 
@@ -594,6 +586,28 @@ h2, h3 {
   }
 }
 
+@media (min-width: 641px) and (max-width: 680px) {
+  .header-buttons,
+  .footer-buttons {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .button:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 740px) {
+  .athlets-img {
+    max-width: 43%;
+  }
+
+  .players-img {
+    max-width: 58%;
+  }
+}
+
 @media (min-width: 961px) {
   .main-header,
   .main-footer {
@@ -616,12 +630,12 @@ h2, h3 {
     width: 100%;
     max-width: 1560px;
     padding: 0 5px;
-    font-size: 90px;
+    font-size: 64px;
     line-height: 1;
     letter-spacing: 4.8px;
   }
 
-  .header-title.slogan:nth-child(even) {
+  .header-title span {
     margin-top: 1px;
   }
 
@@ -769,13 +783,13 @@ h2, h3 {
   }
 
   .action-title {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 64px;
+    line-height: 1;
     letter-spacing: 0.1px;
   }
 
   .action-description {
-    margin-top: 100px;
+    margin-top: 60px;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 1.2px;
@@ -843,5 +857,39 @@ h2, h3 {
 
   .footer-buttons {
     margin-top: 160px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1120px) {
+  .players-img {
+    max-width: 86%;
+  }
+}
+
+@media (min-width: 1110px) and (max-width: 1920px) {
+  .header-title {
+    font-size: calc(2.7vw + 38px);
+  }
+
+  .action-title {
+    font-size: calc(1.7vw + 47.6px);
+  }
+
+  .action-description {
+    margin-top: 4vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .header-title {
+    font-size: 90px;
+  }
+
+  .action-title {
+    font-size: 80px;
+  }
+
+  .action-description {
+    margin-top: 100px;
   }
 }
