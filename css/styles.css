@@ -751,13 +751,13 @@ h2, h3 {
 
   .li-square::before {
     top: 30%;
-    left: calc(50% - 85px);
+    left: calc(50% - 55px);
     font-size: 24px;
     line-height: 48px;
-    border-left-width: 69px;
-    border-right-width: 69px;
-    border-top-width: 47px;
-    border-bottom-width: 57px;
+    border-left-width: 45px;
+    border-right-width: 45px;
+    border-top-width: 30px;
+    border-bottom-width: 39px;
   }
 
 
@@ -783,7 +783,7 @@ h2, h3 {
   }
 
   .action-title {
-    font-size: 64px;
+    font-size: 50px;
     line-height: 1;
     letter-spacing: 0.1px;
   }
@@ -804,7 +804,7 @@ h2, h3 {
   }
 
   .action-item:nth-child(even) .action-label {
-    padding-left: 10%;
+    padding-left: 6.5%;
   }
 
   .action-item:nth-child(even) .action-description {
@@ -866,17 +866,25 @@ h2, h3 {
   }
 }
 
-@media (min-width: 1110px) and (max-width: 1920px) {
+@media (min-width: 1110px) and (max-width: 1919px) {
   .header-title {
     font-size: calc(2.7vw + 38px);
   }
 
   .action-title {
-    font-size: calc(1.7vw + 47.6px);
+    font-size: calc(3.7vw + 8.93px);
   }
 
   .action-description {
-    margin-top: 4vw;
+    margin-top: calc(4.9vw + 5.6px);
+  }
+
+  .li-square::before {
+    left: calc(50% - 3.7vw - 14px);
+    border-left-width: calc(3vw + 11.7px);
+    border-right-width: calc(3vw + 11.7px);
+    border-top-width: calc(2vw + 7.8px);
+    border-bottom-width: calc(2.2vw + 14.6px);
   }
 }
 
@@ -891,5 +899,17 @@ h2, h3 {
 
   .action-description {
     margin-top: 100px;
+  }
+
+  .li-square::before {
+    left: calc(50% - 85px);
+    border-left-width: 69px;
+    border-right-width: 69px;
+    border-top-width: 47px;
+    border-bottom-width: 57px;
+  }
+
+  .action-item:nth-child(even) .action-label {
+    padding-left: 10%;
   }
 }
