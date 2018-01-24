@@ -608,6 +608,16 @@ h2, h3 {
   }
 }
 
+@media (min-width: 641px) and (max-width: 768px) {
+  .header-title {
+    font-size: calc(18.75vw - 80px);
+  }
+
+  .header-title span {
+    max-width: calc(78.12vw - 100px);
+  }
+}
+
 @media (min-width: 961px) {
   .main-header,
   .main-footer {
