@@ -804,7 +804,7 @@ h2, h3 {
   }
 
   .action-item:nth-child(even) .action-label {
-    padding-left: 6.5%;
+    padding-left: 5.5%;
   }
 
   .action-item:nth-child(even) .action-description {
